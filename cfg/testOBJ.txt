@@ -1,0 +1,56 @@
+# [number from 1] [filename] |
+#   [global offsets] | [rotation angles] | [local offsets] | [final rotation]
+#
+#     both rotation angles and offsets are a vector of 3,
+#     separated by spaces. Rotation angles are in degrees
+#     and around the x/y/z-axis. Offset in x/y/z-direction.
+# -----------------------------------------------------------
+# Put this after new lines: |  0 0 0  |  0 0 0  |  0 0 0  |  0 0 0
+# -----------------------------------------------------------
+
+lenCS = 0.1
+
+#drawGlobalBB = True
+drawGlobalBB = False
+
+scaling = 1e-3
+
+#drawBB = True
+#xyzCoordinates = True
+offsetMethod = fixed
+# ------------------------
+#[test] data/diamond.obj |  0 0 0  |  0 0 0  |  0 0 0 | 0 0 0
+[gearfix] data/gearbox.obj |  0 0 2225  |  0 0 0  |  0 0 0 | 0 -90 0
+[tower_fix] data/tower.obj |  0 0 1000 |  0 180 0  |  0 0 0 | 0 180 -90
+[gen_fix] data/generator.obj |  0 0 5700  |  0 0 0  |  0 0 0 | 90 0 90
+#[houseFix] data/lowspeed_shaft_house.obj |  0 0 200  |  0 0 0  |  0 0 0 | 180 90 0
+# ------------------------
+
+useBBcenter = True
+
+offsetMethod = matlab
+[2] data/ring.obj   |  0 0 0  |  0 0 0  |  0 0 0  |  0 0 0
+[3] data/planet.obj |  0 0 0  |  0 0 0  |  0 0 0  |  0 0 0
+[5] data/planet.obj |  0 0 0  |  0 0 0  |  0 0 0  |  0 0 0
+[6] data/planet.obj |  0 0 0  |  0 0 0  |  0 0 0  |  0 0 0
+offsetMethod = matlab+fixed
+#[1] data/drive_train.obj |  0 0 -100  |  0 0 90  |  0 0 0 | 0 0 0
+[4] data/sun.obj    |  0 0 0  |  0 0 0  |  0 0 0  |  0 0 0
+[8] data/unijoint.obj |  0 0 0  |  0 0 0  |  0 0 0 | 0 0 0
+
+useBBcenter = False
+[1] data/nordtank_rotating.obj |  0 0 -550  |  0 0 0  |  0 0 0  |  0 -90 0
+
+scaling=0.1
+#[1] data/cube.obj # make this work at some time!
+#[1] data/cube.obj |  0 0 1  |  0 0 0  |  0 0 0  |  45 0 0
+#[2] data/cube.obj |  0 0 0  |  0 0 0  |  0 0 0  |  0 0 0
+#[3] data/cube.obj |  0 0 0  |  0 0 0  |  0 0 0  |  0 0 0
+#[4] data/cube.obj |  0 0 0  |  0 0 0  |  0 0 0  |  0 0 0
+#[5] data/cube.obj |  0 0 0  |  0 0 0  |  0 0 0  |  0 0 0
+#[6] data/cube.obj |  0 0 0  |  0 0 0  |  0 0 0  |  0 0 0
+#[7] data/cube.obj |  0 0 0  |  0 0 0  |  0 0 0  |  0 0 0
+#[8] data/cube.obj |  0 0 0  |  0 0 0  |  0 0 0  |  0 0 0
+#[fixCube] data/cube.obj |  0 0 2  |  0 0 0  |  0 0 0  |  0 0 0
+#[fixCube2] data/cube.obj |  0 0 4  |  0 0 0  |  0 0 0  |  0 0 0
+#[fixCube3] data/cube.obj |  0 0 6  |  0 0 0  |  0 0 0  |  0 0 0
