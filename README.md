@@ -5,6 +5,7 @@ Visualization - OpenGL - Wind Turbine model
 # Wind Turbine Visualization
 
 This is Python-code for visualization of wind turbine forces calculated in Matlab, as part of my PhD-project "Aerodynamic and Mechanical System Modelling", at Technical University of Denmark during the years 2010-2013 - my thesis can be found online, however the thesis does not completely describe this project. This code illustrates how to work with OpenGL (rotations, translations etc) and 3D geometries, including conversion to/from Euler angles/quaternions.
+![Alt text](/data/WT.png?raw=true "Wind Turbine Visualization")
 
 
 ## Getting Started
@@ -25,7 +26,8 @@ pacman -S (package-name you need, check your console for error messages)
 
 ### Running the program
 
-When all dependencies are satisfied, you should be able to run the program using e.g. "python2.7 main.py" (only tested on Linux). The program will open up an OpenGL window with some statistics about what it's doing:
+When all dependencies are satisfied, you should be able to run the program using e.g. "python2.7 main.py" (only tested on Linux). The program will open up an OpenGL window with some info/statistics about what it's doing:
+![Alt text](/data/screenshot_with_console.png?raw=true "Console output")
 
 
 ```
@@ -125,7 +127,8 @@ Multibody objects: set([1, 2, 3, 4, 5, 6, 7, 8])
 
 ### Other comments
 
-There are no unit-tests or similar in this package. This has been a stand-alone exercise for me to learn about 3D OpenGL coding and I'm sure it can be improved many places if I had more time.
+There are no unit-tests or similar in this package. This has been a stand-alone exercise for me to learn more about 3D OpenGL coding, coordinate transformations etc and I'm sure it can be improved many places if I had more time. I also believe some years prior to putting this project here, this code ran at around 60 FPS - instead of only 4 FPS. I have not investigated this issue. The intention of the project was only to visualize some Matlab results and make a small library for 3D operations.
+![Alt text](/data/gearbox_closeup.png?raw=true "Close-up")
 
 
 ## Authors
