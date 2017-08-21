@@ -189,6 +189,7 @@ class loadOBJfromFile:
                 self.logger.info('Opening: ' + self.OBJfname)
                 self.logger.info('==================================')
             f = open(self.OBJfname, "r")
+            dirName = os.path.dirname(self.OBJfname)
             for line in f:
                 if line.startswith('#'): continue
                 values = line.split()
@@ -206,7 +207,7 @@ class loadOBJfromFile:
                     material = values[1] # will be appended to self.faces below...
                 elif values[0] == 'mtllib': # load material from input file...
                     try: # loadMTLfromFile(file)
-                        self.MTL_filename = values[1]
+                        self.MTL_filename = dirName + "/" + values[1]
                         self.loadMTLfromFile()
                     except:
                         #print "Exception: ", exc_info()
