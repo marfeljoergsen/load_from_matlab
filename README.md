@@ -138,7 +138,7 @@ There are no unit-tests or similar in this package. This has been a stand-alone 
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 
 ## Acknowledgments
